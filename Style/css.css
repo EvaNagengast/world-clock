@@ -5,59 +5,89 @@
 body {
   background-image: url("world-map-wave-blue-red.jpg");
   background-size: cover;
-font-family: 'Playfair Display', serif
-;
+  font-family: "Libre Baskerville", serif;
 }
 
 .container {
-  margin: 30px auto;
-  padding: 10px 40px 40px 40px;
-  width: 500px;
+  margin: 30px auto 10px;
+  padding: 10px 40px 5px 40px;
+  width: 600px;
   border-radius: 4px;
   background-color: #e2565fdc;
-  box-shadow: 0 0  12px 4px #ad4a51;
+  box-shadow: 0 0 12px 4px #ad4a51;
 }
 /* body */
 h1 {
-  font-family: 'Vast Shadow', cursive;
-  font-size: 50px;
+  font-family: "Vast Shadow", cursive;
+  font-size: 55px;
   color: #e7ddc5;
   text-align: center;
 }
 /* searchbox */
-.selectElement{
-    text-align: center;
-margin: 0 auto;
-
+.selectElement {
+  text-align: center;
+  margin: 0 auto;
 }
 
-.select{
-  color: #152c34; 
+.select {
+  color: #152c34;
   background: #e7ddc5;
-  padding: 4px; 
+  padding: 4px;
   width: 50%;
-border-radius: 3px ;
-font-size: 16px;
+  border-radius: 3px;
+  font-size: 16px;
+}
 
+/* cities */
+
+.city {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10px auto;
+  padding:  0 0 5px 0;
+  border-bottom: 1px dashed #d6cab1;
+}
+.city:last-child{
+    border: none;
+}
+h2 {
+  margin: 0 0 0 0;
+}
+.time {
+  display: flex;
+  font-weight: 700;
+  gap: 6px;
+}
+.timeNumber {
+  font-size: 35px;
+}
+
+small {
+  vertical-align: text-top;
+  font-size: 13px;
 }
 
 /* footer */
 footer {
   text-align: center;
   font-weight: 700;
-  color: #388699;
-   text-shadow: 1px 1px #e7ddc5;
+  color: #e7ddc5;
+
+  font-family: "Libre Baskerville", serif;
+  font-size: 12px;
 }
-.footer { 
-  background-color: #e4d6ae6b;
+.footer {
+  background-color: #e2565f;
 }
 .heart {
-  font-size: 14px;
+  font-size: 8px;
   margin: 5px 0 0 5px;
 }
 .gitHubLink {
-  color: #388699;
+  color: #d6cab1;
 }
 .gitHubLink:hover {
-  color: antiquewhite;
+  color: #e7ddc5;
 }
