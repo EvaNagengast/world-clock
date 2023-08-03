@@ -94,13 +94,39 @@ setInterval(changeTime, 900);
 
 function changeMainCity(event) {
   let cityValue = event.target.value;
-  let splitcityValue = cityValue.split(`/`);
 
-  let city = splitcityValue[1].replaceAll("_", " ");
-console.log(city)
-  let displayedCities = document.querySelector("#displaycities");
+  if (cityValue === "current") {
+    let currentPosition = moment.tz.guess();
+    let currentCity = currentPosition.split(`/`)[1];
 
-  displayedCities.innerHTML = `
+    console.log(currentPosition);
+    console.log(currentCity);
+    let displayedCities = document.querySelector("#displaycities");
+
+    displayedCities.innerHTML = `
+    <div class="city" id="cityCurrent">
+      <div class="cityAndDate">
+        <h2>${currentCity}</h2>
+        <div class="date">${moment
+          .tz(currentPosition)
+          .format("MMMM, [the] Do, YYYY")}</div>
+      </div>
+      <div class="timeElement">
+        <div class="timeNumber">
+          <span class="time">${moment
+            .tz(currentPosition)
+            .format("h:mm:ss")}</span>
+          <small class="ampm">${moment.tz(currentPosition).format("A")}</small>
+        </div>
+      </div>
+    </div>`;
+  } else {
+    if (cityValue !== "choose") {
+      let splitcityValue = cityValue.split(`/`);
+      let city = splitcityValue[1].replaceAll("_", " ");
+      let displayedCities = document.querySelector("#displaycities");
+
+      displayedCities.innerHTML = `
     <div class="city" id="cityNew">
       <div class="cityAndDate">
         <h2>${city}</h2>
@@ -111,12 +137,12 @@ console.log(city)
       <div class="timeElement">
         <div class="timeNumber">
           <span class="time">${moment.tz(cityValue).format("h:mm:ss")}</span>
-          <small class="ampm">${moment
-            .tz(cityValue)
-            .format("A")}</small>
+          <small class="ampm">${moment.tz(cityValue).format("A")}</small>
         </div>
       </div>
     </div>`;
+    }
+  }
 }
 
 let citySelector = document.querySelector("#city-selector");
