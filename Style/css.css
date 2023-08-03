@@ -10,7 +10,7 @@ body {
 
 .container {
   margin: 30px auto 10px;
-  padding: 10px 40px 5px 40px;
+  padding: 10px 30px 5px 30px;
   width: 600px;
   border-radius: 4px;
   background-color: #e2565fdc;
@@ -55,7 +55,10 @@ h1 {
 h2 {
   margin: 0 0 0 0;
 }
-.time {
+.date {
+  font-size: 16px;
+}
+.timeElement {
   display: flex;
   font-weight: 700;
   gap: 6px;
@@ -64,9 +67,11 @@ h2 {
   font-size: 35px;
 }
 
-small {
+.ampm {
   vertical-align: text-top;
+  padding: 0 0 0 3px;
   font-size: 13px;
+  line-height: 28px;
 }
 
 /* footer */
