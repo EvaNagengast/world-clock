@@ -1,3 +1,45 @@
-body{
-    background-color: aquamarine;
+body {
+  background-image: url("world-map-wave-blue-red.jpg");
+  background-size: cover;
+font-family: 'Playfair Display', serif
+;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.container {
+  margin: 30px auto;
+  width: 500px;
+  border-radius: 4px;
+  background-color: #e06666;
+  box-shadow: 5px 5px 10px 5px #2d1414;
+}
+/* body */
+h1 {
+  font-family: 'Vast Shadow', cursive;
+  font-size: 50px;
+  color: antiquewhite;
+  text-align: center;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  font-weight: 700;
+  color: #e06666;
+}
+.footer {
+  background-color: #1a0c0cd4;
+}
+.heart {
+  font-size: 14px;
+  margin: 5px 0 0 5px;
+}
+.gitHubLink {
+  color: #e06666;
+}
+.gitHubLink:hover {
+  color: antiquewhite;
 }
