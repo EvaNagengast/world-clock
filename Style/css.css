@@ -14,7 +14,7 @@ body {
   width: 600px;
   border-radius: 4px;
   background-color: #e2565fdc;
-  box-shadow: 0 0 12px 4px #ad4a51;
+  box-shadow: 0 0 12px 2px #ad4a51;
 }
 /* body */
 h1 {
@@ -46,11 +46,11 @@ h1 {
   justify-content: space-between;
   align-items: flex-start;
   margin: 10px auto;
-  padding:  0 0 5px 0;
+  padding: 0 0 5px 0;
   border-bottom: 1px dashed #d6cab1;
 }
-.city:last-child{
-    border: none;
+.city:last-child {
+  border: none;
 }
 h2 {
   margin: 0 0 0 0;
@@ -78,6 +78,10 @@ footer {
   font-family: "Libre Baskerville", serif;
   font-size: 12px;
 }
+strong {
+  color: #e7ddc5;
+}
+
 .footer {
   background-color: #e2565f;
 }
@@ -85,9 +89,18 @@ footer {
   font-size: 8px;
   margin: 5px 0 0 5px;
 }
+
+.linkedIn {
+  color: #e7ddc5;
+}
+.linkedIn:hover {
+  color: #df868c;
+  text-shadow: 1px 1px #c73640;
+}
 .gitHubLink {
-  color: #d6cab1;
+  color: #e7ddc5;
 }
 .gitHubLink:hover {
-  color: #e7ddc5;
+  color: #df868c;
+  text-shadow: 1px 1px #c73640;
 }
