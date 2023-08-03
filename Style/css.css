@@ -5,7 +5,9 @@
 body {
   background-image: url("world-map-wave-blue-red.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Libre Baskerville", serif;
+  background-color: #e4d6b3;
 }
 
 .container {
@@ -18,35 +20,37 @@ body {
 }
 /* body */
 h1 {
+  text-align: center;
   font-family: "Vast Shadow", cursive;
   font-size: 55px;
+
   color: #e7ddc5;
-  text-align: center;
 }
 /* searchbox */
 .selectElement {
-  text-align: center;
   margin: 0 auto;
+  text-align: center;
 }
 
 .select {
-  color: #152c34;
-  background: #e7ddc5;
   padding: 4px;
   width: 50%;
   border-radius: 3px;
   font-size: 16px;
+  color: #152c34;
+  background: #e7ddc5;
 }
 
 /* cities */
 
 .city {
+  margin: 10px auto;
+  padding: 0 0 5px 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 10px auto;
-  padding: 0 0 5px 0;
+
   border-bottom: 1px dashed #d6cab1;
 }
 .city:last-child {
@@ -60,28 +64,27 @@ h2 {
 }
 .timeElement {
   display: flex;
-  font-weight: 700;
+
   gap: 6px;
+  font-weight: 700;
 }
 .timeNumber {
   font-size: 35px;
 }
 
 .ampm {
-  vertical-align: text-top;
   padding: 0 0 0 3px;
-  font-size: 13px;
+  vertical-align: text-top;
   line-height: 28px;
+  font-size: 13px;
 }
 
 /* footer */
 footer {
   text-align: center;
+  font-size: 12px;
   font-weight: 700;
   color: #e7ddc5;
-
-  font-family: "Libre Baskerville", serif;
-  font-size: 12px;
 }
 strong {
   color: #e7ddc5;
@@ -91,8 +94,8 @@ strong {
   background-color: #e2565f;
 }
 .heart {
-  font-size: 8px;
   margin: 5px 0 0 5px;
+  font-size: 8px;
 }
 
 .linkedIn {
