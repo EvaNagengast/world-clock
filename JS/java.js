@@ -11,17 +11,10 @@ function changeTime() {
 
   let cityOneAmPm = moment.tz(`America/Los_Angeles`).format(`A`);
   document.querySelector("#cityOne .ampm").innerHTML = cityOneAmPm;
-}
 
-changeTime();
-setInterval(changeTime, 900);
+  //Bogota
 
-//Sao Paulo
-
-function changeTimeTwo() {
-  let cityTwoDate = moment
-    .tz(`America/Bogota`)
-    .format(`MMMM, [the] Do, YYYY`);
+  let cityTwoDate = moment.tz(`America/Bogota`).format(`MMMM, [the] Do, YYYY`);
   document.querySelector("#cityTwo .date").innerHTML = cityTwoDate;
 
   let cityTwoTime = moment.tz(`America/Bogota`).format(`h:mm:ss`);
@@ -29,14 +22,9 @@ function changeTimeTwo() {
 
   let cityTwoAmPm = moment.tz(`America/Bogota`).format(`A`);
   document.querySelector("#cityTwo .ampm").innerHTML = cityTwoAmPm;
-}
 
-changeTimeTwo();
-setInterval(changeTimeTwo, 900);
+  // London
 
-//London
-
-function changeTimeThree() {
   let cityThreeDate = moment.tz(`Europe/London`).format(`MMMM, [the] Do, YYYY`);
   document.querySelector("#cityThree .date").innerHTML = cityThreeDate;
 
@@ -45,17 +33,10 @@ function changeTimeThree() {
 
   let cityThreeAmPm = moment.tz(`Europe/London`).format(`A`);
   document.querySelector("#cityThree .ampm").innerHTML = cityThreeAmPm;
-}
 
-changeTimeThree();
-setInterval(changeTimeThree, 900);
+  //Cairo
 
-//Cairo
-
-function changeTimeFour() {
-  let cityFourDate = moment
-    .tz(`Africa/Cairo`)
-    .format(`MMMM, [the] Do, YYYY`);
+  let cityFourDate = moment.tz(`Africa/Cairo`).format(`MMMM, [the] Do, YYYY`);
   document.querySelector("#cityFour .date").innerHTML = cityFourDate;
 
   let cityFourTime = moment.tz(`Africa/Cairo`).format(`h:mm:ss`);
@@ -63,17 +44,10 @@ function changeTimeFour() {
 
   let cityFourAmPm = moment.tz(`Africa/Cairo`).format(`A`);
   document.querySelector("#cityFour .ampm").innerHTML = cityFourAmPm;
-}
 
-changeTimeFour();
-setInterval(changeTimeFour, 900);
+  //Singapore
 
-//Singapore
-
-function changeTimeFive() {
-  let cityFiveDate = moment
-    .tz(`Asia/Singapore`)
-    .format(`MMMM, [the] Do, YYYY`);
+  let cityFiveDate = moment.tz(`Asia/Singapore`).format(`MMMM, [the] Do, YYYY`);
   document.querySelector("#cityFive .date").innerHTML = cityFiveDate;
 
   let cityFiveTime = moment.tz(`Asia/Singapore`).format(`h:mm:ss`);
@@ -81,14 +55,9 @@ function changeTimeFive() {
 
   let cityFiveAmPm = moment.tz(`Asia/Singapore`).format(`A`);
   document.querySelector("#cityFive .ampm").innerHTML = cityFiveAmPm;
-}
 
-changeTimeFive();
-setInterval(changeTimeFive, 900);
+  //Melbourne
 
-//Melbourne
-
-function changeTimeSix() {
   let citySixDate = moment
     .tz(`Australia/Melbourne`)
     .format(`MMMM, [the] Do, YYYY`);
@@ -101,5 +70,5 @@ function changeTimeSix() {
   document.querySelector("#citySix .ampm").innerHTML = citySixAmPm;
 }
 
-changeTimeSix();
-setInterval(changeTimeSix, 900);
+changeTime();
+setInterval(changeTime, 900);
