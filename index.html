@@ -25,25 +25,28 @@
 
     <!-- h1: font-family: 'Vast Shadow', cursive;
          p: font-family: 'Libre Baskerville', serif; -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Vast+Shadow&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Vast+Shadow&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- style -->
     <link rel="stylesheet" href="Style/css.css" />
   </head>
   <body>
     <!-- body -->
- 
+
     <div class="container">
-        <div class="clock">
-    <div class="second-indicator" id="second-indicator"></div>
+      
+        <div class="clock" id="circle">
+      </div>
       <h1>World Clock</h1>
       <div class="selectElement">
         <select class="select" id="city-selector">
-         <option value="choose">Choose your City</option>
-         <option value="current" class="current">Your current timezone</option>
+          <option value="choose">Choose your City</option>
+          <option value="current" class="current">Your current time</option>
           <option value="US/Alaska">Alaska</option>
           <option value="Pacific/Auckland">Auckland</option>
           <option value="Asia/Baghdad">Baghdad</option>
@@ -68,7 +71,7 @@
         </select>
       </div>
       <div id="displaycities">
-        <div class="city" id="cityOne">
+        <div class="city cityborder" id="cityOne">
           <div class="cityAndDate">
             <h2>Los Angeles</h2>
             <div class="date">12.12.2023</div>
@@ -80,7 +83,7 @@
           </div>
         </div>
 
-        <div class="city" id="cityTwo">
+        <div class="city cityborder" id="cityTwo">
           <div class="cityAndDate">
             <h2>Bogota</h2>
             <div class="date">12.12.2023</div>
@@ -92,7 +95,7 @@
           </div>
         </div>
 
-        <div class="city" id="cityThree">
+        <div class="city cityborder" id="cityThree">
           <div class="cityAndDate">
             <h2>London</h2>
             <div class="date">12.12.2023</div>
@@ -104,7 +107,7 @@
           </div>
         </div>
 
-        <div class="city" id="cityFour">
+        <div class="city cityborder" id="cityFour">
           <div class="cityAndDate">
             <h2>Cairo</h2>
             <div class="date">12.12.2023</div>
@@ -116,7 +119,7 @@
           </div>
         </div>
 
-        <div class="city" id="cityFive">
+        <div class="city cityborder" id="cityFive">
           <div class="cityAndDate">
             <h2>Singapore</h2>
             <div class="date">12.12.2023</div>
@@ -139,7 +142,6 @@
             </div>
           </div>
         </div>
-      
       </div>
     </div>
     <!-- footer -->

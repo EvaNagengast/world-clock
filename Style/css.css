@@ -2,23 +2,44 @@
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
-body {
+body {  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   background-image: url("world-map-wave-blue-red.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Libre Baskerville", serif;
+  color: #911119;
   background-color: #e4d6b3;
+
+
+
 }
 
 .container {
-  margin: 30px auto 10px;
+  margin: 35px auto 8px;
   padding: 10px 30px 5px 30px;
   width: 600px;
   border-radius: 4px;
   background-color: #e2565fdc;
   box-shadow: 0 0 12px 2px #ad4a51;
+  position: relative;
 }
 /* clock */
+
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #00c4f87d;
+  box-shadow:0 0 8px 1px #155288c3;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
 
 /* body */
 h1 {
@@ -42,7 +63,7 @@ h1 {
   text-align: center;
   border: 1px solid #e7ddc5;
   box-shadow: 0 0 4px 0.4px #331619;
-  color: #152c34;
+  color: #911119;
   background: #e7ddc5;
 }
 .current {
@@ -57,12 +78,13 @@ h1 {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-start;
+}
 
+.cityborder{
   border-bottom: 1px dashed #d6cab1;
 }
-.city:last-child {
-  border: none;
-}
+
+
 h2 {
   margin: 0 0 0 0;
 }
@@ -93,7 +115,7 @@ h2 {
   border-radius: 4px;
   box-shadow: 0 0 4px 0.4px #a52f38;
   color: #e7ddc5;
-  background-color: #e4555f;
+  background-color: #e4555fc1;
 }
 .reloadButton:hover {
   border: 1px solid #e7ddc5;
@@ -107,13 +129,15 @@ footer {
   font-size: 12px;
   font-weight: 700;
   color: #e7ddc5;
+  z-index: -1;
+  position: relative;
 }
 strong {
   color: #e7ddc5;
 }
 
 .footer {
-  background-color: #e2565f;
+  background-color: #e2565fb4;
 }
 .heart {
   margin: 5px 0 0 5px;

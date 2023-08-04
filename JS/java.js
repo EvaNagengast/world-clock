@@ -94,56 +94,49 @@ setInterval(changeTime, 900);
 
 function changeMainCity(event) {
   let cityValue = event.target.value;
-
+  let circle = document.querySelector("#circle");
   if (cityValue === "current") {
-    let currentPosition = moment.tz.guess();
-    let currentCity = currentPosition.split(`/`)[1];
+    cityValue = moment.tz.guess();
+  }
 
-    console.log(currentPosition);
-    console.log(currentCity);
+  if (cityValue !== "choose") {
+    let splitcityValue = cityValue.split(`/`);
+    let city = splitcityValue[1].replaceAll("_", " ");
     let displayedCities = document.querySelector("#displaycities");
+    let time = moment.tz(cityValue).format("h:mm");
+    let ampm = moment.tz(cityValue).format("A");
+    let date = moment.tz(cityValue).format("MMMM, [the] Do, YYYY");
 
     displayedCities.innerHTML = `
-    <div class="city" id="cityCurrent">
-      <div class="cityAndDate">
-        <h2>${currentCity}</h2>
-        <div class="date">${moment
-          .tz(currentPosition)
-          .format("MMMM, [the] Do, YYYY")}</div>
-      </div>
-      <div class="timeElement">
-        <div class="timeNumber">
-          <span class="time">${moment
-            .tz(currentPosition)
-            .format("h:mm:ss")}</span>
-          <small class="ampm">${moment.tz(currentPosition).format("A")}</small>
-        </div>
-      </div>
-    </div> <input class="reloadButton" type="button" value="Back to all cities" onclick="location.reload();">`;
-  } else {
-    if (cityValue !== "choose") {
-      let splitcityValue = cityValue.split(`/`);
-      let city = splitcityValue[1].replaceAll("_", " ");
-      let displayedCities = document.querySelector("#displaycities");
-
-      displayedCities.innerHTML = `
     <div class="city" id="cityNew">
       <div class="cityAndDate">
         <h2>${city}</h2>
-        <div class="date">${moment
-          .tz(cityValue)
-          .format("MMMM, [the] Do, YYYY")}</div>
+        <div class="date">${date}</div>
       </div>
       <div class="timeElement">
         <div class="timeNumber">
-          <span class="time">${moment.tz(cityValue).format("h:mm:ss")}</span>
-          <small class="ampm">${moment.tz(cityValue).format("A")}</small>
+          <span class="time">${time}</span>
+          <small class="ampm">${ampm}</small>
         </div>
       </div>
     </div>  <input class="reloadButton" type="button" value="Back to all cities" onclick="location.reload();"> `;
-    }
   }
+  circle.classList.add("circle");
 }
 
 let citySelector = document.querySelector("#city-selector");
 citySelector.addEventListener("change", changeMainCity);
+
+// circle movement
+
+function updateCirclePosition() {
+  let circle = document.querySelector("#circle");
+
+  let seconds = moment.tz(`America/Los_Angeles`).format(`ss`);
+  console.log(seconds)
+  let degrees = (seconds / 60) * 360-90;
+  circle.style.transform = `rotate(${degrees}deg) translateX(170px) rotate(-${degrees}deg)`;
+}
+
+setInterval(updateCirclePosition, 1000);
+console.log(updateCirclePosition());
