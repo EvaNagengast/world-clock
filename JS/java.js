@@ -95,6 +95,7 @@ setInterval(changeTime, 900);
 function changeMainCity(event) {
   let cityValue = event.target.value;
   let circle = document.querySelector("#circle");
+  let footer = document.querySelector("#footer-box");
   if (cityValue === "current") {
     cityValue = moment.tz.guess();
   }
@@ -122,6 +123,7 @@ function changeMainCity(event) {
     </div>  <input class="reloadButton" type="button" value="Back to all cities" onclick="location.reload();"> `;
   }
   circle.classList.add("circle");
+footer.classList.add("addMargin");
 }
 
 let citySelector = document.querySelector("#city-selector");

@@ -2,7 +2,8 @@
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
-body {  display: flex;
+body {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -13,9 +14,6 @@ body {  display: flex;
   font-family: "Libre Baskerville", serif;
   color: #911119;
   background-color: #e4d6b3;
-
-
-
 }
 
 .container {
@@ -34,7 +32,7 @@ body {  display: flex;
   width: 50px;
   height: 50px;
   background-color: #00c4f87d;
-  box-shadow:0 0 8px 1px #155288c3;
+  box-shadow: 0 0 8px 1px #155288c3;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -80,10 +78,9 @@ h1 {
   align-items: flex-start;
 }
 
-.cityborder{
+.cityborder {
   border-bottom: 1px dashed #d6cab1;
 }
-
 
 h2 {
   margin: 0 0 0 0;
@@ -126,10 +123,9 @@ h2 {
 /* footer */
 footer {
   text-align: center;
-  font-size: 12px;
   font-weight: 700;
   color: #e7ddc5;
-  z-index: -1;
+
   position: relative;
 }
 strong {
@@ -138,23 +134,24 @@ strong {
 
 .footer {
   background-color: #e2565fb4;
+  font-size: 18px;
 }
 .heart {
   margin: 5px 0 0 5px;
-  font-size: 8px;
+  font-size: 12px;
 }
-
+.addMargin{
+margin-top: 55px;
+}
 .linkedIn {
   color: #e7ddc5;
 }
 .linkedIn:hover {
   color: #df868c;
-  text-shadow: 1px 1px #c73640;
 }
 .gitHubLink {
   color: #e7ddc5;
 }
 .gitHubLink:hover {
   color: #df868c;
-  text-shadow: 1px 1px #c73640;
 }
