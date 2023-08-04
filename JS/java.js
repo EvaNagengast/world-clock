@@ -119,7 +119,7 @@ function changeMainCity(event) {
           <small class="ampm">${moment.tz(currentPosition).format("A")}</small>
         </div>
       </div>
-    </div>`;
+    </div> <input class="reloadButton" type="button" value="Back to all cities" onclick="location.reload();">`;
   } else {
     if (cityValue !== "choose") {
       let splitcityValue = cityValue.split(`/`);
@@ -140,7 +140,7 @@ function changeMainCity(event) {
           <small class="ampm">${moment.tz(cityValue).format("A")}</small>
         </div>
       </div>
-    </div>`;
+    </div>  <input class="reloadButton" type="button" value="Back to all cities" onclick="location.reload();"> `;
     }
   }
 }
